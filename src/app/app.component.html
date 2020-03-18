@@ -20,21 +20,62 @@
     </div>
 
     <div class="todo-list">
-      <div class="todo-list__item">
-        <span class="item__description">to-do number one</span>
+      <mat-list>
+        <mat-list-item class="todo-list__item">
+          <div class="item__description">to-do number one</div>
 
-        <div>
-          <button mat-button class="btn-important">
-            <mat-icon>notification_important</mat-icon>
-          </button>
-          <button mat-button class="btn-done">
-            <mat-icon>done_all</mat-icon>
-          </button>
-          <button mat-button class="btn-delete">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </div>
-      </div>
+          <div class="todo-list__action-buttons">
+            <button mat-button class="btn-important">
+              <mat-icon>notification_important</mat-icon>
+            </button>
+            <button mat-button class="btn-done">
+              <mat-icon>done_all</mat-icon>
+            </button>
+            <button mat-button class="btn-delete">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="todo-list__item">
+          <div class="item__description">to-do number two</div>
+
+          <div class="todo-list__action-buttons">
+            <button mat-button class="btn-important">
+              <mat-icon>notification_important</mat-icon>
+            </button>
+            <button mat-button class="btn-done">
+              <mat-icon>done_all</mat-icon>
+            </button>
+            <button mat-button class="btn-delete">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="todo-list__item">
+          <div class="item__description">to-do number three</div>
+
+          <div class="todo-list__action-buttons">
+            <button mat-button class="btn-important">
+              <mat-icon>notification_important</mat-icon>
+            </button>
+            <button mat-button class="btn-done">
+              <mat-icon>done_all</mat-icon>
+            </button>
+            <button mat-button class="btn-delete">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+      </mat-list>
     </div>
 
     <mat-form-field class="todo-list__input">
