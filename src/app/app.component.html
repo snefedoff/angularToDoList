@@ -12,7 +12,7 @@
         <input matInput placeholder="" value="">
       </mat-form-field>
 
-      <mat-button-toggle-group name="todoItemOption">
+      <mat-button-toggle-group name="todoItemOption" class="app-options__buttons">
         <mat-button-toggle value="important">Important</mat-button-toggle>
         <mat-button-toggle value="done">Done</mat-button-toggle>
         <mat-button-toggle value="all">All</mat-button-toggle>
@@ -21,54 +21,20 @@
 
     <div class="todo-list">
       <div class="todo-list__item">
-        <span>to-do number one</span>
+        <span class="item__description">to-do number one</span>
 
-        <button mat-button>
-          <mat-icon>notification_important</mat-icon>
-        </button>
-        <button mat-button>
-          <mat-icon>done_all</mat-icon>
-        </button>
-
-        <button mat-button>
-          <mat-icon>delete</mat-icon>
-        </button>
-
+        <div>
+          <button mat-button class="btn-important">
+            <mat-icon>notification_important</mat-icon>
+          </button>
+          <button mat-button class="btn-done">
+            <mat-icon>done_all</mat-icon>
+          </button>
+          <button mat-button class="btn-delete">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
       </div>
-
-      <div class="todo-list__item">
-        <span>to-do number two</span>
-
-        <button mat-button>
-          <mat-icon>notification_important</mat-icon>
-        </button>
-        <button mat-button>
-          <mat-icon>done_all</mat-icon>
-        </button>
-
-        <button mat-button>
-          <mat-icon>delete</mat-icon>
-        </button>
-
-      </div>
-
-      <div class="todo-list__item">
-        <span>to-do number three</span>
-
-        <button mat-button>
-          <mat-icon>notification_important</mat-icon>
-        </button>
-        <button mat-button>
-          <mat-icon>done_all</mat-icon>
-        </button>
-
-        <button mat-button>
-          <mat-icon>delete</mat-icon>
-        </button>
-
-      </div>
-
-
     </div>
 
     <mat-form-field class="todo-list__input">
@@ -76,7 +42,7 @@
       <input matInput placeholder="Master TypeScript" value="">
     </mat-form-field>
 
-    <button mat-raised-button>Add to-do</button>
+    <button mat-raised-button class="btn-addtodo">Add to-do</button>
   </main>
 
   <footer class="app-footer"></footer>

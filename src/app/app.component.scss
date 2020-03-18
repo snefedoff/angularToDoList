@@ -1,15 +1,23 @@
+@import "normalize.css";
+@import "controls.scss";
+
+$appWidth: 40%;
+
 .page {
   width: 90%;
   margin: auto;
 }
 
 .app-header {
-  width: 60%;
+  width: $appWidth;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .app-container {
-  width: 60%;
+  width: $appWidth;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -20,6 +28,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  &__buttons {
+
+  }
 }
 
 .todo-list__item {
