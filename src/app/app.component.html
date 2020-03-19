@@ -19,71 +19,24 @@
       </mat-button-toggle-group>
     </div>
 
-    <div class="todo-list">
-      <mat-list>
-        <mat-list-item class="todo-list__item">
-          <div class="item__description">to-do number one</div>
-
-          <div class="todo-list__action-buttons">
-            <button mat-button class="btn-important">
-              <mat-icon>notification_important</mat-icon>
-            </button>
-            <button mat-button class="btn-done">
-              <mat-icon>done_all</mat-icon>
-            </button>
-            <button mat-button class="btn-delete">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </div>
-
-        </mat-list-item>
-        <mat-divider></mat-divider>
-
-        <mat-list-item class="todo-list__item">
-          <div class="item__description">to-do number two</div>
-
-          <div class="todo-list__action-buttons">
-            <button mat-button class="btn-important">
-              <mat-icon>notification_important</mat-icon>
-            </button>
-            <button mat-button class="btn-done">
-              <mat-icon>done_all</mat-icon>
-            </button>
-            <button mat-button class="btn-delete">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </div>
-
-        </mat-list-item>
-        <mat-divider></mat-divider>
-
-        <mat-list-item class="todo-list__item">
-          <div class="item__description">to-do number three</div>
-
-          <div class="todo-list__action-buttons">
-            <button mat-button class="btn-important">
-              <mat-icon>notification_important</mat-icon>
-            </button>
-            <button mat-button class="btn-done">
-              <mat-icon>done_all</mat-icon>
-            </button>
-            <button mat-button class="btn-delete">
-              <mat-icon>delete</mat-icon>
-            </button>
-          </div>
-
-        </mat-list-item>
-        <mat-divider></mat-divider>
-
-      </mat-list>
-    </div>
+    <app-todo-list [listItems]="listItems"></app-todo-list>
 
     <mat-form-field class="todo-list__input">
       <mat-label>Add new to-do</mat-label>
-      <input matInput placeholder="Master TypeScript" value="">
+      <input
+        #addItem
+        matInput
+        placeholder="Master TypeScript and Angular"
+        value=""
+      >
     </mat-form-field>
 
-    <button mat-raised-button class="btn-addtodo">Add to-do</button>
+    <button
+      mat-raised-button
+      class="btn-addtodo"
+      (click)="onAddItem(addItem.value); addItem.value = '';"
+
+    >Add to-do</button>
   </main>
 
   <footer class="app-footer"></footer>
