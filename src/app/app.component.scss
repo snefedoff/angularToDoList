@@ -1,5 +1,4 @@
 @import "normalize.css";
-@import "controls.scss";
 
 $appWidth: 40%;
 
@@ -10,6 +9,7 @@ $appWidth: 40%;
 
 .app-header {
   width: $appWidth;
+  min-width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -18,6 +18,7 @@ $appWidth: 40%;
 
 .app-container {
   width: $appWidth;
+  min-width: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -28,18 +29,8 @@ $appWidth: 40%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  &__buttons {
-
-  }
+}
+.btn-addtodo {
+  min-height: 32px;
 }
 
-.todo-list {
-  &__item {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__action-buttons{
-    margin-left: auto;
-  }
-}
