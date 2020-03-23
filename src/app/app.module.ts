@@ -13,13 +13,15 @@ import {MatListModule} from '@angular/material/list';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
+import { TodoOptionsComponent } from './todo-options/todo-options.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     TodoListItemComponent,
-    AddItemComponent
+    AddItemComponent,
+    TodoOptionsComponent
   ],
   imports: [
     BrowserModule,

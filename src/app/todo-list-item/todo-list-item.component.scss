@@ -9,6 +9,16 @@
   font-size: 16px;
 }
 
+.item-important {
+  font-size: 28px;
+  color: orangered;
+}
+
+.item-done {
+  text-decoration: line-through;
+  color: grey;
+}
+
 .btn-important {
   marign: 0;
   padding: 0;

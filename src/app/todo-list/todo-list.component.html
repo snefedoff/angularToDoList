@@ -1,13 +1,14 @@
 <div class="todo-list">
   <mat-list>
     <app-todo-list-item
-      *ngFor="let item of todoListService.todoList"
+      *ngFor="let item of getList()"
       [text]="item.name"
       [isDone]="item.isDone"
       [isImportant]="item.isImportant"
 
-      (onDelete)="onItemDelete($event, item)"
+      (onDelete)="onItemDelete(item)"
+      (onDone)="onItemDone(item)"
+      (onImportant)="onItemImportant(item)"
     ></app-todo-list-item>
-    <!--rework, todoListService.todoList is public field-->
   </mat-list>
 </div>

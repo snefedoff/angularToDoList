@@ -12,6 +12,8 @@ export class TodoListItemComponent implements OnInit {
   @Input() isImportant: boolean;
 
   @Output() onDelete = new EventEmitter();
+  @Output() onImportant = new EventEmitter();
+  @Output() onDone = new EventEmitter();
 
   constructor() {
   }

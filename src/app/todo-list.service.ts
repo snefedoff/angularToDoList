@@ -15,9 +15,7 @@ export class TodoItem {
 
 export interface ITodoService {
   add(todoText: string);
-
   remove(idx: number);
-
   update(idx: number, record: TodoItem);
 }
 
@@ -46,6 +44,6 @@ export class TodoListService implements ITodoService {
 
   init(){
     this.add('test1');
-    this.add('tets2');
+    this.add('tesе2');
   }
 }

@@ -6,22 +6,10 @@
 
   <main class="app-container">
 
-    <div class="app-options">
-      <mat-form-field class="todo-list__input">
-        <mat-label>Filter to-do</mat-label>
-        <input matInput placeholder="" value="">
-      </mat-form-field>
-
-      <mat-button-toggle-group name="todoItemOption" class="app-options__buttons">
-        <mat-button-toggle value="important">Important</mat-button-toggle>
-        <mat-button-toggle value="done">Done</mat-button-toggle>
-        <mat-button-toggle value="all">All</mat-button-toggle>
-      </mat-button-toggle-group>
-    </div>
-
+    <app-todo-options></app-todo-options>
     <app-todo-list></app-todo-list>
+    <app-add-item></app-add-item>
 
-    <app-add-item class="app-container" ></app-add-item>
   </main>
 
   <footer class="app-footer"></footer>

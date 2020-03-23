@@ -11,7 +11,7 @@
 <button
   mat-raised-button
   class="btn-addtodo"
-  (click)="this.todoListService.add(addItem.value); addItem.value='';"
+  (click)="onAddItem(addItem.value); addItem.value='';"
 >
   Add to-do
 </button>
