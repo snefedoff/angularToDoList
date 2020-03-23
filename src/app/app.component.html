@@ -1,6 +1,6 @@
 <div class="page">
   <header class="app-header">
-    <h1>{{title}}</h1>
+    <h1>Angular ToDo App</h1>
     <p>0 of 3 done</p>
   </header>
 
@@ -19,24 +19,9 @@
       </mat-button-toggle-group>
     </div>
 
-    <app-todo-list [listItems]="listItems"></app-todo-list>
+    <app-todo-list></app-todo-list>
 
-    <mat-form-field class="todo-list__input">
-      <mat-label>Add new to-do</mat-label>
-      <input
-        #addItem
-        matInput
-        placeholder="Master TypeScript and Angular"
-        value=""
-      >
-    </mat-form-field>
-
-    <button
-      mat-raised-button
-      class="btn-addtodo"
-      (click)="onAddItem(addItem.value); addItem.value = '';"
-
-    >Add to-do</button>
+    <app-add-item class="app-container" ></app-add-item>
   </main>
 
   <footer class="app-footer"></footer>

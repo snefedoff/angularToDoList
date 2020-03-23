@@ -1,5 +1,5 @@
 <mat-list-item class="todo-list-item">
-  <div class="item-description">{{props.text}}</div>
+  <div class="item-description">{{text}}</div>
 
   <div class="action-buttons">
     <button mat-button class="btn-important">
@@ -11,7 +11,7 @@
     <button
       mat-button
       class="btn-delete"
-      (click)="onDelete()"
+      (click)="onDelete.emit()"
     >
       <mat-icon>delete</mat-icon>
     </button>

@@ -1,0 +1,17 @@
+<mat-form-field class="todo-list__input">
+  <mat-label>Add new to-do</mat-label>
+  <input
+    #addItem
+    matInput
+    placeholder="Master TypeScript and Angular"
+    value=""
+  >
+</mat-form-field>
+
+<button
+  mat-raised-button
+  class="btn-addtodo"
+  (click)="this.todoListService.add(addItem.value); addItem.value='';"
+>
+  Add to-do
+</button>

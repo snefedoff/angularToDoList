@@ -12,12 +12,14 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
+import { AddItemComponent } from './add-item/add-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
-    TodoListItemComponent
+    TodoListItemComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
