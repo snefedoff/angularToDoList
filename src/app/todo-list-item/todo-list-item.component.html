@@ -1,0 +1,22 @@
+<mat-list-item class="todo-list-item">
+  <div class="item-description">{{text}}</div>
+
+  <div class="action-buttons">
+    <button mat-button class="btn-important">
+      <mat-icon>notification_important</mat-icon>
+    </button>
+    <button mat-button class="btn-done">
+      <mat-icon>done_all</mat-icon>
+    </button>
+    <button
+      mat-button
+      class="btn-delete"
+      (click)="onDelete.emit()"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+
+</mat-list-item>
+<mat-divider></mat-divider>
+

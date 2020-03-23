@@ -1,0 +1,36 @@
+@import "normalize.css";
+
+$appWidth: 40%;
+
+.page {
+  width: 90%;
+  margin: auto;
+}
+
+.app-header {
+  width: $appWidth;
+  min-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.app-container {
+  width: $appWidth;
+  min-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-addtodo {
+  min-height: 32px;
+}
+
