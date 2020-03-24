@@ -14,6 +14,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { TodoListItemComponent } from './todo-list-item/todo-list-item.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { TodoOptionsComponent } from './todo-options/todo-options.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TodoOptionsComponent } from './todo-options/todo-options.component';
     TodoListComponent,
     TodoListItemComponent,
     AddItemComponent,
-    TodoOptionsComponent
+    TodoOptionsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

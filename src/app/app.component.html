@@ -1,13 +1,18 @@
 <div class="page">
-  <header class="app-header">
-    <h1>Angular ToDo App</h1>
-    <p>0 of 3 done</p>
-  </header>
+  <app-header
+    class="app-header"
+  ></app-header>
 
   <main class="app-container">
 
-    <app-todo-options></app-todo-options>
-    <app-todo-list></app-todo-list>
+    <app-todo-options
+      (onFilterSelect)="setFilter($event);"
+      (onFilterTextInput)="setFilterText($event);"
+    ></app-todo-options>
+    <app-todo-list
+      [selectedFilter]="selectedFilter"
+      [filterText]="filterText"
+    ></app-todo-list>
     <app-add-item></app-add-item>
 
   </main>

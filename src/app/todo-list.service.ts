@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 
 export class TodoItem {
-  id: number;
   name: string;
   isDone: boolean;
   isImportant: boolean;
@@ -15,7 +14,9 @@ export class TodoItem {
 
 export interface ITodoService {
   add(todoText: string);
+
   remove(idx: number);
+
   update(idx: number, record: TodoItem);
 }
 
@@ -42,8 +43,20 @@ export class TodoListService implements ITodoService {
   update(idx: number, record: TodoItem) {
   }
 
-  init(){
-    this.add('test1');
-    this.add('tesе2');
+  init() {
+    this.add('Learn HTML');
+    this.add('Learn CSS');
+    this.add('Learn JavaScript');
+    this.add('Learn Angular');
+    this.add('Make something awesome ');
+    this.add('Profit');
+  }
+
+  getDoneTodosCount() {
+    return this.todoList.filter(item => item.isDone).length;
+  }
+
+  getAllTodosCount() {
+    return this.todoList.length;
   }
 }

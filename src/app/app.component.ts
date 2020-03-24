@@ -7,7 +7,20 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  constructor() {}
+  selectedFilter: string;
+  filterText: string;
 
-  ngOnInit() {}
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
+  setFilter(filt) {
+    this.selectedFilter = filt;
+  }
+
+  setFilterText(text) {
+    this.filterText = text;
+  }
 }

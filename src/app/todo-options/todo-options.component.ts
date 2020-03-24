@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-todo-options',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-options.component.scss']
 })
 export class TodoOptionsComponent implements OnInit {
+  @Output() onFilterSelect = new EventEmitter();
+  @Output() onFilterTextInput = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

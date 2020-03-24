@@ -1,12 +1,37 @@
 <div class="app-options">
   <mat-form-field class="todo-list__input">
     <mat-label>Filter to-do</mat-label>
-    <input matInput placeholder="" value="">
+    <input
+      #filterTextInput
+      matInput
+      placeholder=""
+      value=""
+      (input)="this.onFilterTextInput.emit(filterTextInput.value);"
+    >
   </mat-form-field>
 
-  <mat-button-toggle-group name="todoItemOption" class="app-options__buttons">
-    <mat-button-toggle value="important">Important</mat-button-toggle>
-    <mat-button-toggle value="done">Done</mat-button-toggle>
-    <mat-button-toggle value="all">All</mat-button-toggle>
+  <mat-button-toggle-group
+    name="todoItemOption"
+    class="app-options__buttons"
+    value="all"
+  >
+    <mat-button-toggle
+      value="important"
+      (click)="this.onFilterSelect.emit('important');"
+    >
+      Important
+    </mat-button-toggle>
+    <mat-button-toggle
+      value="done"
+      (click)="this.onFilterSelect.emit('done');"
+    >
+      Done
+    </mat-button-toggle>
+    <mat-button-toggle
+      value="all"
+      (click)="this.onFilterSelect.emit('all');"
+    >
+      All
+    </mat-button-toggle>
   </mat-button-toggle-group>
 </div>

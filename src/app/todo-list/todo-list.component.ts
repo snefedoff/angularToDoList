@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {TodoItem, TodoListService} from "../todo-list.service";
+import {Component, Input, OnInit} from '@angular/core';
+import {TodoItem, TodoListService} from '../todo-list.service';
 
 @Component({
   selector: 'app-todo-list',
@@ -8,6 +8,9 @@ import {TodoItem, TodoListService} from "../todo-list.service";
 })
 export class TodoListComponent implements OnInit {
 
+  @Input() selectedFilter: string;
+  @Input() filterText: string;
+
   constructor(public todoListService: TodoListService) {
   }
 
@@ -15,8 +18,10 @@ export class TodoListComponent implements OnInit {
   }
 
   onItemDelete(item): void {
-    const list = this.getList();
-    list.splice(list.indexOf(item), 1);
+    this.todoListService.todoList.splice(
+      this.todoListService.todoList.indexOf(item),
+      1
+    );
   }
 
   onItemImportant(item): void {
@@ -24,10 +29,26 @@ export class TodoListComponent implements OnInit {
   }
 
   onItemDone(item): void {
-    item.isDone = true;
+    item.isDone = !item.isDone;
   }
 
   getList(): TodoItem[] {
-    return this.todoListService.todoList;
+
+    let list = this.todoListService.todoList;
+    if (this.filterText) {
+      list = list.filter(item => item.name.includes(this.filterText));
+    }
+
+    switch (this.selectedFilter) {
+      case 'important':
+        return list.filter(item => item.isImportant);
+        break;
+      case 'done':
+        return list.filter(item => item.isDone);
+        break;
+      case 'all':
+      default:
+        return list;
+    }
   }
 }
